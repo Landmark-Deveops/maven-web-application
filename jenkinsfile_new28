@@ -7,7 +7,7 @@ node{
         }
         stage('3CodeQuality'){sh "${mavenHome}/bin/mvn sonar:sonar"
         }
-         stage('4UploadArtifacts'){sh "${mavenHome}/bin/mvn deploy"}
+        /* stage('4UploadArtifacts'){sh "${mavenHome}/bin/mvn deploy"}
          stage('5Deploy2UAT'){deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://44.204.7.136:8080/')], contextPath: null, war: 'target/*war'}
          stage('6Approval'){ timeout(time:9, unit:'HOURS') {input message: 'Application ready for deployment, Please review and approve'
     }}
@@ -19,4 +19,4 @@ node{
 
 Regards,
 Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'paypal-team@gmail.com'
-  }}
+  }*/}
