@@ -5,7 +5,7 @@ node{
         stage('2Test&build'){sh "${mavenHome}/bin/mvn install"
             
         }
-        /*stage('3CodeQuality'){sh "${mavenHome}/bin/mvn sonar:sonar"
+        stage('3CodeQuality'){sh "${mavenHome}/bin/mvn sonar:sonar"
         }
          stage('4UploadArtifacts'){sh "${mavenHome}/bin/mvn deploy"}
          stage('5Deploy2UAT'){deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://44.204.7.136:8080/')], contextPath: null, war: 'target/*war'}
@@ -19,4 +19,4 @@ node{
 
 Regards,
 Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'paypal-team@gmail.com'
-  }*/}
+  }}
