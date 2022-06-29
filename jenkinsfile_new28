@@ -1,0 +1,22 @@
+node{
+    def mavenHome = tool name: 'maven3.8.6' 
+    stage('clonecode'){
+        git "https://github.com/Landmark-Deveops/maven-web-application"}
+        stage('2Test&build'){sh "${mavenHome}/bin/mvn install"
+            
+        }
+        /*stage('3CodeQuality'){sh "${mavenHome}/bin/mvn sonar:sonar"
+        }
+         stage('4UploadArtifacts'){sh "${mavenHome}/bin/mvn deploy"}
+         stage('5Deploy2UAT'){deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://44.204.7.136:8080/')], contextPath: null, war: 'target/*war'}
+         stage('6Approval'){ timeout(time:9, unit:'HOURS') {input message: 'Application ready for deployment, Please review and approve'
+    }}
+         stage('7Deployment2prod'){deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://44.204.7.136:8080/')], contextPath: null, war: 'target/*war'
+         }
+         stage('8notification'){
+    // Pipeline Syntax 
+    emailext body: '''Build status for frontend application.
+
+Regards,
+Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'paypal-team@gmail.com'
+  }*/}
